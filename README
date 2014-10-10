@@ -1,0 +1,80 @@
+QtEmu
+=====
+
+QtEmu is a graphical user interface for QEMU written in Qt4.
+It has the ability to run virtual operating systems on native
+systems. This way you can easily test a new operating system
+or try a Live CD on your system without any troubles and dangers.
+
+Installation
+------------
+Download a source archive from the QtEmu project website
+(http://qtemu.org/). Most probably you have already
+done so ;).
+
+Qt 4.2 is at least required.
+
+LibVNCServer 0.9.7 is at least required. For the VNC socket feature, a
+recent SVN build is required.
+http://sourceforge.net/project/showfiles.php?group_id=32584&package_id=24717
+
+Compilation with cmake (recommended):
+(Use this methode on Linux to install the project systemwide.)
+* run 'cmake -DCMAKE_INSTALL_PREFIX=/usr .' in order to
+  install all files into /usr.
+* type 'make install' as root
+* start it now with qtemu
+
+Compilation with qmake from Qt4:
+* unpack the source tarball
+* run 'qmake' in the qtemu folder
+* type 'make'
+* start ./qtemu and have fun!
+
+Network Configuration:
+  QtEmu will handle all network configuration for you on Linux. In
+  order to support bridging modes, a few programs need to be
+  installed:
+     sudo
+     ip
+     route
+     brctl
+     tunctl
+  along with kernel modules to make these utilities function.
+
+  Additionally, so that QtEmu can automatically use these programs
+  as a normal user, a few lines need to be added to the end of 
+  /etc/sudoers as follows with visudo:
+
+### rules for QtEmu ###
+User_Alias QTEMU = %qtemu
+
+Cmnd_Alias      QEMU_COMMANDS = /sbin/route, /usr/sbin/brctl, /usr/sbin/tunctl, /sbin/ip
+
+QTEMU   ALL=NOPASSWD: QEMU_COMMANDS
+### end rules for QtEmu ###
+
+  You need to have the qtemu group, and your user needs to be part
+  of it. Eventually QtEmu will do all this automatically for you, 
+  but until then manual intervention is neccesary.
+
+  One last note: the above paths should be correct in most cases,
+  but if something doesn't work and debugging says that a command
+  you know is installed is "unavailable", make sure these paths
+  are right for you!
+
+Have Fun!
+
+Copyright / License
+-------------------
+QtEmu is released under GPL. Copyright © 2006-2009 Urs Wolfer and
+Ben Klopfenstein. All rights reserved. The icons have been taken
+from the KDE Crystal theme which is LGPL licensed.
+
+Author
+------
+QtEmu is written by Urs Wolfer <uwolfer fwo ch>. It has been
+started as a project work for school.
+Ben Klopfenstein <benklop gmail com> began adding some features
+he wanted, and is now rather involved in writing the next few
+versions. He also uses it for school.

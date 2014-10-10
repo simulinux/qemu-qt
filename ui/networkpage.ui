@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NetworkPage</class>
+ <widget class="QWidget" name="NetworkPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>608</width>
+    <height>518</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="networkBox">
+     <property name="title">
+      <string>&amp;Networking</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <property name="leftMargin">
+       <number>4</number>
+      </property>
+      <item>
+       <widget class="QCheckBox" name="networkCheck">
+        <property name="toolTip">
+         <string>Enable networking</string>
+        </property>
+        <property name="text">
+         <string>Enable network</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="networkFrame">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_28">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_22">
+           <item>
+            <widget class="QPushButton" name="advancedButton">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="toolTip">
+              <string>Enter the advanced network settings dialog</string>
+             </property>
+             <property name="text">
+              <string>Advanced Settings</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_24">
+           <item>
+            <widget class="QStackedWidget" name="networkStack">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="page">
+              <layout class="QVBoxLayout" name="verticalLayout_12">
+               <item>
+                <layout class="QGridLayout" name="gridLayout_2">
+                 <item row="0" column="1">
+                  <widget class="QComboBox" name="easyModeBox">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>User Mode</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Bridged Interface</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Routed Interface</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_19">
+                   <property name="text">
+                    <string>Select Network Interface Type:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QCheckBox" name="checkBox">
+                   <property name="text">
+                    <string>Assign MAC address automatically</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="easyMacEdit">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QCheckBox" name="accelCheck">
+                   <property name="text">
+                    <string>Use accelerated network drivers</string>
+                   </property>
+                   <property name="valueIfTrue" stdset="0">
+                    <string>virtio</string>
+                   </property>
+                   <property name="valueIfFalse" stdset="0">
+                    <string>rtl8139</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_17">
+                 <property name="text">
+                  <string>&lt;span style=&quot;color:#aa0000;&quot;&gt;NOTICE: This interface is not yet complete! Networking modes do not modify your host operating system's network setup! This means bridging requires additional steps.&lt;/span&gt;</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_2">
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <layout class="QHBoxLayout" name="connectorLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_2">
+                   <item>
+                    <widget class="QLabel" name="label">
+                     <property name="text">
+                      <string>Guest Interfaces</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_3">
+                     <item>
+                      <widget class="QPushButton" name="addGuest">
+                       <property name="baseSize">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>:/images/oxygen/add.png</normaloff>:/images/oxygen/add.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="delGuest">
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>:/images/oxygen/remove.png</normaloff>:/images/oxygen/remove.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_4">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QTreeView" name="guestView"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_3">
+                   <item>
+                    <widget class="QLabel" name="label_2">
+                     <property name="text">
+                      <string>Host Interfaces</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_4">
+                     <item>
+                      <widget class="QPushButton" name="addHost">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>:/images/oxygen/add.png</normaloff>:/images/oxygen/add.png</iconset>
+                       </property>
+                       <property name="flat">
+                        <bool>false</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="delHost">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>:/images/oxygen/remove.png</normaloff>:/images/oxygen/remove.png</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="hostTypeBox">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>User Mode</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Bridged Interface</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Routed Interface</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Shared Virtual Lan</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Custom TAP</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QTreeView" name="hostView"/>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QStackedWidget" name="propertyStack">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Sunken</enum>
+                 </property>
+                 <property name="currentIndex">
+                  <number>6</number>
+                 </property>
+                 <widget class="QWidget" name="hostUserPage">
+                  <layout class="QVBoxLayout" name="verticalLayout_8">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_3">
+                     <property name="fieldGrowthPolicy">
+                      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>Assign Hostname via DHCP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="hostnameEdit"/>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QCheckBox" name="tftpCheck">
+                       <property name="text">
+                        <string>Set up TFTP Server</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <layout class="QHBoxLayout" name="horizontalLayout_6">
+                       <property name="spacing">
+                        <number>4</number>
+                       </property>
+                       <item>
+                        <widget class="QLineEdit" name="tftpEdit"/>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_5">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>32</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>:/images/oxygen/open.png</normaloff>:/images/oxygen/open.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>16</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QCheckBox" name="bootpCheck">
+                       <property name="text">
+                        <string>Broadcast BOOTP File</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <layout class="QHBoxLayout" name="horizontalLayout_7">
+                       <property name="spacing">
+                        <number>4</number>
+                       </property>
+                       <item>
+                        <widget class="QLineEdit" name="bootpEdit"/>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_6">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>32</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>:/images/oxygen/open.png</normaloff>:/images/oxygen/open.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>16</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QPushButton" name="portButton">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="text">
+                        <string>Port Redirection...</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="hostBridgePage">
+                  <layout class="QVBoxLayout" name="verticalLayout_7">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_2">
+                     <property name="fieldGrowthPolicy">
+                      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_13">
+                       <property name="text">
+                        <string>Host Interface Name</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="interfaceEdit"/>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_4">
+                       <property name="text">
+                        <string>Bridge Interface Name</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="bridgeEdit"/>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QComboBox" name="hardwareEdit"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_5">
+                       <property name="text">
+                        <string>Bridged Hardware Interface</string>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>false</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QCheckBox" name="spanningCheck">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="text">
+                        <string>Use Spanning Tree</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="hostRoutePage">
+                  <layout class="QVBoxLayout" name="verticalLayout_10">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_4">
+                     <item row="1" column="1">
+                      <widget class="QComboBox" name="hardwareEdit_2"/>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_11">
+                       <property name="text">
+                        <string>Hardware interface to route to</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_12">
+                       <property name="text">
+                        <string>Host Interface Name</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="interfaceEdit_2"/>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="hostVLanPage">
+                  <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <item>
+                    <widget class="QGroupBox" name="groupBox">
+                     <property name="title">
+                      <string>Shared Virtual Lan Transport</string>
+                     </property>
+                     <property name="flat">
+                      <bool>false</bool>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_10">
+                      <property name="leftMargin">
+                       <number>4</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="udpButton">
+                        <property name="text">
+                         <string>UDP Multicast (Multiple Guests)</string>
+                        </property>
+                        <property name="value" stdset="0">
+                         <string>udp</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="tcpButton">
+                        <property name="text">
+                         <string>TCP Unicast (Two Guests)</string>
+                        </property>
+                        <property name="value" stdset="0">
+                         <string>tcp</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QGridLayout" name="gridLayout">
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="addressCombo">
+                       <property name="editable">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_9">
+                       <property name="text">
+                        <string>Select Bus Address</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_10">
+                       <property name="text">
+                        <string>Select Bus Port</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QSpinBox" name="portSpin"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="hostTapPage">
+                  <layout class="QVBoxLayout" name="verticalLayout_11">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout_5">
+                     <property name="fieldGrowthPolicy">
+                      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_14">
+                       <property name="text">
+                        <string>TAP Interface Name</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="interfaceEdit_3"/>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_15">
+                       <property name="text">
+                        <string>Interface Up Script</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_16">
+                       <property name="text">
+                        <string>Interface Down Script</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <layout class="QHBoxLayout" name="horizontalLayout_11">
+                       <property name="spacing">
+                        <number>4</number>
+                       </property>
+                       <item>
+                        <widget class="QLineEdit" name="upScriptEdit"/>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_9">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>32</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>:/images/oxygen/open.png</normaloff>:/images/oxygen/open.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>16</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item row="2" column="1">
+                      <layout class="QHBoxLayout" name="horizontalLayout_12">
+                       <property name="spacing">
+                        <number>4</number>
+                       </property>
+                       <item>
+                        <widget class="QLineEdit" name="downScriptEdit"/>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_10">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>32</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>:/images/oxygen/open.png</normaloff>:/images/oxygen/open.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>16</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer_3">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="guestPage">
+                  <layout class="QVBoxLayout" name="verticalLayout_5">
+                   <item>
+                    <layout class="QFormLayout" name="formLayout">
+                     <property name="fieldGrowthPolicy">
+                      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_6">
+                       <property name="text">
+                        <string>Emulated Network Card Model</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="nicModelCombo">
+                       <item>
+                        <property name="text">
+                         <string>i82551</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>i82557b</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>i82559er</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>ne2k_pci</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>ne2k_isa</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>pcnet</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>rtl8139</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>e1000</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>virtio</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_18">
+                       <property name="text">
+                        <string>Assign to Host Interface</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QComboBox" name="hostInterface"/>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="macEdit"/>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_3">
+                       <property name="text">
+                        <string>Interface MAC Address</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QPushButton" name="macButton">
+                       <property name="text">
+                        <string>Generate new MAC</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="randomCheck">
+                     <property name="text">
+                      <string>Set a new, random MAC address upon each boot</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="page_3"/>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>Custom networking options:</string>
+           </property>
+           <property name="buddy">
+            <cstring>networkEdit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLineEdit" name="networkEdit">
+             <property name="toolTip">
+              <string>Enter cutom networking options</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Custom networking options disable all automatic options</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>hostTypeBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>propertyStack</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>randomCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>macEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>429</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>364</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>randomCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>macButton</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>429</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>55</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>easyMacEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
